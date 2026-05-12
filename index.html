@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CieloStitch | Astronomical Mosaic Stitching</title>
+    <meta
+      name="description"
+      content="CieloStitch is a high-performance astronomical mosaic stitching application for solar, lunar, and astrophotography workflows."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <script defer src="scripts/main.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="CieloStitch home">
+          <img src="assets/logo.svg" alt="" width="48" height="48" />
+          <span class="brand-copy">
+            <strong>CieloStitch</strong>
+            <span>Astronomical mosaic stitching</span>
+          </span>
+        </a>
+        <div class="header-actions">
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle dark mode"
+            aria-pressed="false"
+          >
+            <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+            <span>Theme</span>
+          </button>
+          <a class="button button--ghost" href="https://github.com/PixlWeave/CieloStitch">
+            GitHub
+          </a>
+        </div>
+      </header>
+
+      <main id="top">
+        <section class="hero section">
+          <div class="hero__content">
+            <p class="eyebrow">Scientific imaging software</p>
+            <h1>High-performance astronomical mosaic stitching</h1>
+            <p class="hero__lead">
+              Build precise solar and lunar mosaics with a desktop workflow designed
+              for high-resolution panel alignment, fast processing, and open-source
+              flexibility.
+            </p>
+            <div class="hero__actions">
+              <a
+                class="button button--primary"
+                href="https://github.com/PixlWeave/CieloStitch/releases/download/v0.4.50/CieloStitch-Setup-v0.4.50-win64.exe"
+              >
+                Download for Windows
+              </a>
+              <a class="button button--secondary" href="https://github.com/PixlWeave/CieloStitch">
+                View on GitHub
+              </a>
+            </div>
+            <dl class="hero__stats" aria-label="Release overview">
+              <div>
+                <dt>Latest release</dt>
+                <dd>v0.4.50</dd>
+              </div>
+              <div>
+                <dt>Desktop stack</dt>
+                <dd>Python + PySide</dd>
+              </div>
+              <div>
+                <dt>Core license</dt>
+                <dd>MIT</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="hero__visual card card--glow">
+            <img
+              class="hero__mosaic"
+              src="assets/mosaic-after.svg"
+              alt="Stylized preview of a stitched solar mosaic"
+            />
+            <div class="hero__orbit hero__orbit--one" aria-hidden="true"></div>
+            <div class="hero__orbit hero__orbit--two" aria-hidden="true"></div>
+          </div>
+        </section>
+
+        <section class="features section" aria-labelledby="features-title">
+          <div class="section-heading">
+            <p class="eyebrow">Features</p>
+            <h2 id="features-title">Built for demanding astronomical mosaics</h2>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <h3>Solar and lunar mosaics</h3>
+              <p>Subject-aware workflows tailored for solar surface detail, H-alpha imaging, and lunar panel capture.</p>
+            </article>
+            <article class="card">
+              <h3>Feature-based alignment</h3>
+              <p>Robust panel matching uses image features to align overlapping captures with precision.</p>
+            </article>
+            <article class="card">
+              <h3>High-resolution stitching</h3>
+              <p>Assemble expansive mosaics while preserving fine structures across large stitched canvases.</p>
+            </article>
+            <article class="card">
+              <h3>Fast processing</h3>
+              <p>Optimized matching and blending paths reduce turnaround time for large panel sets.</p>
+            </article>
+            <article class="card">
+              <h3>PySide desktop app</h3>
+              <p>A modern desktop GUI provides an approachable workflow for interactive review and export.</p>
+            </article>
+            <article class="card">
+              <h3>Open-source core engine</h3>
+              <p>The reusable core is MIT-licensed, making automation and direct integration straightforward.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="showcase section" aria-labelledby="showcase-title">
+          <div class="section-heading">
+            <p class="eyebrow">Showcase</p>
+            <h2 id="showcase-title">See the stitching pipeline in action</h2>
+          </div>
+          <div class="showcase-grid">
+            <figure class="card showcase-preview">
+              <img
+                src="assets/mosaic-after.svg"
+                alt="Large stylized solar mosaic preview representing the stitched output"
+              />
+              <figcaption>Large-format stitched solar mosaic preview</figcaption>
+            </figure>
+            <div class="card comparison-card">
+              <div class="comparison-card__header">
+                <div>
+                  <h3>Before / after stitching</h3>
+                  <p>Compare fragmented capture panels with the final mosaic output.</p>
+                </div>
+                <label class="comparison-card__label" for="comparison-slider">Stitch reveal</label>
+              </div>
+              <div class="comparison" style="--comparison-position: 58%">
+                <img
+                  class="comparison__image"
+                  src="assets/mosaic-before.svg"
+                  alt="Unstitched solar capture panels before alignment"
+                />
+                <div class="comparison__after">
+                  <img
+                    class="comparison__image"
+                    src="assets/mosaic-after.svg"
+                    alt="Stitched solar mosaic after alignment"
+                  />
+                </div>
+                <div class="comparison__divider" aria-hidden="true"></div>
+              </div>
+              <input
+                id="comparison-slider"
+                class="comparison__slider"
+                type="range"
+                min="0"
+                max="100"
+                value="58"
+                aria-label="Comparison slider for before and after stitching"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="architecture section" aria-labelledby="architecture-title">
+          <div class="section-heading">
+            <p class="eyebrow">Architecture</p>
+            <h2 id="architecture-title">Two layers, one focused imaging workflow</h2>
+          </div>
+          <div class="architecture-grid">
+            <article class="card architecture-card">
+              <p class="architecture-card__eyebrow">CieloStitch Core</p>
+              <h3>MIT open-source engine</h3>
+              <p>
+                The reusable stitching core powers feature detection, matching,
+                warping, blending, and export workflows for scientific mosaics.
+              </p>
+              <a href="https://github.com/PixlWeave/CieloStitch">Explore the core repository</a>
+            </article>
+            <article class="card architecture-card">
+              <p class="architecture-card__eyebrow">CieloStitch App</p>
+              <h3>Desktop GUI for capture-to-output workflows</h3>
+              <p>
+                The application layers a PySide desktop experience on top of the core
+                engine for interactive configuration, previews, and release packaging.
+              </p>
+              <a href="https://github.com/PixlWeave/CieloStitch/releases/tag/v0.4.50">See the current desktop release</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="download section" aria-labelledby="download-title">
+          <div class="section-heading">
+            <p class="eyebrow">Download</p>
+            <h2 id="download-title">Get the latest Windows build</h2>
+          </div>
+          <article class="card download-card">
+            <div>
+              <p class="download-card__platform">Windows x64</p>
+              <h3>CieloStitch Setup</h3>
+              <p>
+                Release <strong>v0.4.50</strong> includes the first public desktop app
+                build and core stitching engine.
+              </p>
+            </div>
+            <div class="download-card__meta">
+              <span>Installer</span>
+              <span>Core licensed under MIT</span>
+            </div>
+            <div class="download-card__actions">
+              <a
+                class="button button--primary"
+                href="https://github.com/PixlWeave/CieloStitch/releases/download/v0.4.50/CieloStitch-Setup-v0.4.50-win64.exe"
+              >
+                Download .exe
+              </a>
+              <a
+                class="button button--ghost"
+                href="https://github.com/PixlWeave/CieloStitch/releases"
+              >
+                GitHub Releases
+              </a>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <a href="https://github.com/PixlWeave/CieloStitch">GitHub</a>
+        <a href="https://github.com/PixlWeave/CieloStitch#readme">Documentation</a>
+        <span>© 2026 CieloStitch</span>
+        <span>CieloStitch Core is MIT licensed</span>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,235 @@
+.brand,
+.brand-copy,
+.button,
+.theme-toggle,
+.download-card__actions,
+.download-card__meta,
+.comparison-card__header {
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand {
+  gap: 14px;
+}
+
+.brand-copy {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.brand-copy strong {
+  font-size: 1.15rem;
+}
+
+.brand-copy span:last-child {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.button,
+.theme-toggle {
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.button:hover,
+.theme-toggle:hover,
+.button:focus-visible,
+.theme-toggle:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(121, 174, 255, 0.42);
+  box-shadow: var(--shadow-soft);
+}
+
+.button--primary {
+  background: var(--gradient-primary);
+  color: #05101f;
+  font-weight: 700;
+}
+
+.button--secondary,
+.button--ghost,
+.theme-toggle {
+  background: var(--bg-elevated);
+  backdrop-filter: blur(16px);
+}
+
+.card {
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  background: var(--gradient-surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.card p,
+.comparison-card__header p,
+.download-card p,
+.architecture-card p {
+  color: var(--text-muted);
+}
+
+.card--glow::before {
+  content: "";
+  position: absolute;
+  inset: 10% 14%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(112, 175, 255, 0.28), transparent 64%);
+  filter: blur(24px);
+  pointer-events: none;
+}
+
+.hero__mosaic {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 480px);
+  filter: drop-shadow(0 24px 44px rgba(0, 0, 0, 0.28));
+}
+
+.hero__orbit {
+  position: absolute;
+  border: 1px solid var(--hero-ring);
+  border-radius: 50%;
+  animation: orbit 18s linear infinite;
+}
+
+.hero__orbit--one {
+  inset: 7% 5%;
+}
+
+.hero__orbit--two {
+  inset: 16% 14%;
+  animation-direction: reverse;
+  animation-duration: 24s;
+}
+
+.showcase-preview img,
+.comparison,
+.comparison__after,
+.comparison__image {
+  border-radius: calc(var(--radius-lg) - 4px);
+}
+
+.showcase-preview img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  margin-bottom: 14px;
+}
+
+.showcase-preview figcaption {
+  color: var(--text-muted);
+}
+
+.comparison-card {
+  display: grid;
+  gap: 18px;
+}
+
+.comparison-card__header {
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.comparison-card__label,
+.download-card__platform,
+.architecture-card__eyebrow {
+  font-size: 0.84rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8ddbff;
+  font-weight: 700;
+}
+
+:root[data-theme="light"] .comparison-card__label,
+:root[data-theme="light"] .download-card__platform,
+:root[data-theme="light"] .architecture-card__eyebrow {
+  color: #3468e4;
+}
+
+.comparison {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: #050913;
+}
+
+.comparison__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.comparison__after {
+  position: absolute;
+  inset: 0;
+  width: var(--comparison-position);
+  overflow: hidden;
+}
+
+.comparison__divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--comparison-position) - 1px);
+  width: 2px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.14);
+}
+
+.comparison__slider {
+  width: 100%;
+  accent-color: #7aa2ff;
+}
+
+.architecture-card,
+.download-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.architecture-card a,
+.site-footer a {
+  color: #91c8ff;
+}
+
+:root[data-theme="light"] .architecture-card a,
+:root[data-theme="light"] .site-footer a {
+  color: #285ef0;
+}
+
+.download-card__meta,
+.download-card__actions {
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.download-card__meta span {
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-soft);
+  color: var(--text);
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 720px) {
+  .comparison-card__header {
+    display: grid;
+    justify-content: flex-start;
+  }
+}

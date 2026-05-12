@@ -1,0 +1,157 @@
+.site-header,
+.site-footer,
+.hero,
+.showcase-grid,
+.architecture-grid,
+.download-card,
+.header-actions,
+.hero__actions,
+.card-grid {
+  display: grid;
+}
+
+.site-header,
+.site-footer {
+  width: var(--content-width);
+  margin: 0 auto;
+}
+
+.site-header {
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 22px 0 10px;
+}
+
+.header-actions {
+  grid-auto-flow: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.hero {
+  padding: 54px 0 18px;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+  gap: 36px;
+  align-items: center;
+}
+
+.hero__content {
+  max-width: 660px;
+}
+
+.hero__lead {
+  margin-top: 22px;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.hero__actions {
+  grid-auto-flow: column;
+  justify-content: flex-start;
+  gap: 14px;
+  margin: 28px 0 34px;
+}
+
+.hero__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0;
+}
+
+.hero__stats div {
+  padding: 18px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+}
+
+.hero__stats dt {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.hero__stats dd {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.hero__visual {
+  position: relative;
+  min-height: 460px;
+  padding: 26px;
+  place-items: center;
+}
+
+.card-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.showcase-grid,
+.architecture-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.download-card {
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px 24px;
+  align-items: center;
+}
+
+.site-footer {
+  grid-template-columns: repeat(4, auto);
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 0 28px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 1040px) {
+  .hero,
+  .showcase-grid,
+  .architecture-grid,
+  .download-card {
+    grid-template-columns: 1fr;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .download-card__actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 720px) {
+  .site-header,
+  .hero,
+  .site-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header,
+  .hero {
+    gap: 18px;
+  }
+
+  .header-actions,
+  .hero__actions {
+    grid-auto-flow: row;
+  }
+
+  .card-grid,
+  .hero__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer {
+    justify-content: flex-start;
+    padding-bottom: 32px;
+  }
+}

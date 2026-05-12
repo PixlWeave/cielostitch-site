@@ -85,6 +85,9 @@
 }
 
 .hero__mosaic {
+  display: block;
+  justify-self: center;
+  align-self: center;
   position: relative;
   z-index: 1;
   width: min(100%, 480px);

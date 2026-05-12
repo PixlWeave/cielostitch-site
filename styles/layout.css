@@ -79,6 +79,7 @@
 }
 
 .hero__visual {
+  display: grid;
   position: relative;
   min-height: 460px;
   padding: 26px;

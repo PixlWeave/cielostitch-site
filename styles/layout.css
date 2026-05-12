@@ -83,6 +83,7 @@
   min-height: 460px;
   padding: 26px;
   place-items: center;
+  overflow: visible;
 }
 
 .card-grid {
@@ -90,7 +91,12 @@
   gap: 18px;
 }
 
-.showcase-grid,
+.showcase-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 360px);
+  gap: 22px;
+  align-items: stretch;
+}
+
 .architecture-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;

@@ -1,7 +1,5 @@
 const root = document.documentElement;
 const themeToggle = document.querySelector(".theme-toggle");
-const comparisonSlider = document.querySelector(".comparison__slider");
-const comparison = document.querySelector(".comparison");
 const storedTheme = window.localStorage.getItem("cielostitch-theme");
 
 if (storedTheme) {
@@ -24,9 +22,4 @@ themeToggle?.addEventListener("click", () => {
   }
   window.localStorage.setItem("cielostitch-theme", nextTheme);
   syncThemeButton();
-});
-
-comparisonSlider?.addEventListener("input", (event) => {
-  const { value } = event.target;
-  comparison?.style.setProperty("--comparison-position", `${value}%`);
 });

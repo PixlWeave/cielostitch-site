@@ -44,10 +44,15 @@
     // Windows
     if (f.includes("win") || f.endsWith(".exe") || f.endsWith(".msi")) {
       const arch = detectArch(f);
+      const isPortable = f.includes("portable");
       return {
         platform: "windows",
         arch,
-        label: f.endsWith(".msi") ? "Windows Installer" : "Windows",
+        label: f.endsWith(".exe") || f.endsWith(".msi")
+          ? "Windows Installer"
+          : isPortable
+            ? "Windows Portable"
+            : "Windows",
       };
     }
 
@@ -374,7 +379,7 @@
     /* Binary download buttons */
     if (binaries.length === 0) {
       const empty = document.createElement("p");
-      empty.style.cssText = "font-size:.82rem;color:var(--color-text-muted)";
+      empty.style.cssText = "font-size:.82rem;color:var(--text-muted)";
       empty.textContent = "No binary assets available for this release.";
       col.appendChild(empty);
     } else {
@@ -613,8 +618,8 @@
   function markDemo(container) {
     const notice = document.createElement("p");
     notice.style.cssText =
-      "font-size:.78rem;color:var(--color-text-muted);margin-bottom:16px;" +
-      "background:var(--color-surface-2);border:1px solid var(--color-border);" +
+      "font-size:.78rem;color:var(--text-muted);margin-bottom:16px;" +
+      "background:var(--bg-soft);border:1px solid var(--border);" +
       "border-radius:6px;padding:8px 14px;";
     notice.innerHTML =
       `Preview data — live releases will appear once <a href="${escapeHtml(RELEASES_URL)}" ` +

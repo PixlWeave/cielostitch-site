@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="CieloStitch — stitch high-resolution solar and sky mosaics, frame by frame."/>
+  <title>CieloStitch · Weave the Heavens</title>
+
+  <!-- Preconnect for faster font loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <!-- Animated starfield background -->
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <div class="page-wrapper">
+
+    <!-- ===== Hero section ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__inner">
+
+        <!-- Copy column -->
+        <div class="hero__copy">
+          <span class="hero__badge" aria-hidden="true">
+            <span class="hero__badge-dot"></span>
+            Open Source · MIT
+          </span>
+
+          <h1 class="hero__title" id="hero-title">
+            Cielo<span class="hero__title-accent">Stitch</span>
+          </h1>
+
+          <p class="hero__subtitle">
+            Weave the heavens and the earth,&nbsp;frame&nbsp;by&nbsp;frame.
+            Stitch high-resolution solar mosaics from raw frames with
+            sub-pixel precision and a workflow built for the cosmos.
+          </p>
+
+          <div class="hero__actions">
+            <!-- Download button -->
+            <a
+              href="#download"
+              class="btn btn--primary"
+              aria-label="Download CieloStitch"
+            >
+              <!-- Download icon -->
+              <svg class="btn__icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                <path d="M10 2a.75.75 0 0 1 .75.75v8.69l2.47-2.47a.75.75 0 1 1 1.06 1.06l-3.75 3.75a.75.75 0 0 1-1.06 0L5.72 10.03a.75.75 0 1 1 1.06-1.06L9.25 11.44V2.75A.75.75 0 0 1 10 2Zm-7 13.25a.75.75 0 0 1 .75-.75h12.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"/>
+              </svg>
+              Download
+            </a>
+
+            <!-- GitHub button -->
+            <a
+              href="https://github.com/PixlWeave/cielostitch-site"
+              class="btn btn--ghost"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View CieloStitch on GitHub (opens in new tab)"
+            >
+              <!-- GitHub mark icon -->
+              <svg class="btn__icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.418 2.865 8.166 6.839 9.489.5.09.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.461-1.11-1.461-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.576 9.576 0 0 1 10 4.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.748-1.025 2.748-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.742 0 .268.18.578.688.48C17.138 18.163 20 14.418 20 10c0-5.523-4.477-10-10-10Z"/>
+              </svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Preview image column -->
+        <div class="hero__preview">
+          <div class="hero__preview-frame">
+            <img
+              src="assets/solar-mosaic.svg"
+              alt="Solar mosaic preview — a 4×4 grid of solar image panels stitched together by CieloStitch"
+              class="hero__preview-img"
+              width="720"
+              height="480"
+              loading="eager"
+            />
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- ===== /Hero section ===== -->
+
+    <footer class="site-footer">
+      <p>
+        &copy; 2026 <a href="https://github.com/PixlWeave" target="_blank" rel="noopener noreferrer">PixlWeave</a>
+        &mdash; Released under the
+        <a href="LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a>
+      </p>
+    </footer>
+
+  </div><!-- /.page-wrapper -->
+
+  <script src="js/starfield.js"></script>
+</body>
+</html>

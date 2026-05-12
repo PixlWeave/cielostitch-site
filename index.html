@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CieloStitch — Weave the heavens and the earth</title>
+  <meta name="description" content="CieloStitch weaves still frames into seamless time-lapse stories." />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!--
+    Inline the theme-detection snippet so the correct data-theme attribute
+    is set before the browser paints, eliminating any flash of unstyled theme.
+  -->
+  <script>
+    (function () {
+      var key = 'cielostitch-theme';
+      var stored = localStorage.getItem(key);
+      var theme = (stored === 'dark' || stored === 'light')
+        ? stored
+        : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    }());
+  </script>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       Header
+  ══════════════════════════════════════════════════════════════ -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+
+      <a href="/" class="site-logo" aria-label="CieloStitch home">
+        Cielo<span>Stitch</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#features">Features</a>
+        <a href="#demo">Demo</a>
+        <a href="#about">About</a>
+
+        <!-- Theme toggle — header (compact) -->
+        <button
+          class="theme-toggle"
+          data-theme-toggle
+          aria-label="Switch to dark mode"
+          aria-pressed="false"
+          type="button"
+          title="Toggle color theme"
+        >
+          <!-- Sun icon (shown in light mode) -->
+          <svg class="toggle-icon icon-sun" xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+               aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41
+                     M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+          <!-- Moon icon (shown in dark mode) -->
+          <svg class="toggle-icon icon-moon" xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+               aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <span class="sr-only">Toggle theme</span>
+        </button>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         Hero
+    ══════════════════════════════════════════════════════════════ -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <span class="hero-eyebrow">Time-lapse, reimagined</span>
+        <h1 id="hero-heading">
+          Weave the <em>heavens</em> and<br />the earth, frame by frame
+        </h1>
+        <p class="hero-desc">
+          CieloStitch turns your still photographs into cinematic time-lapse
+          sequences — smoothly, beautifully, and entirely in the browser.
+        </p>
+        <div class="hero-actions">
+          <a href="#features" class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+            Explore features
+          </a>
+          <a href="#demo" class="btn btn-secondary">See the demo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         Features
+    ══════════════════════════════════════════════════════════════ -->
+    <section class="section" id="features" aria-labelledby="features-heading">
+      <div class="container">
+        <h2 class="section-title" id="features-heading">What we offer</h2>
+        <p class="section-subtitle">Everything you need to craft the perfect sequence.</p>
+
+        <div class="grid-3" role="list">
+
+          <article class="card" role="listitem">
+            <div class="card-icon" aria-hidden="true">🌅</div>
+            <h3>Smart Frame Blending</h3>
+            <p>Our algorithm detects exposure changes and blends frames seamlessly for a natural, flicker-free result.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <div class="card-icon" aria-hidden="true">🎞️</div>
+            <h3>Batch Processing</h3>
+            <p>Drop hundreds of images at once. CieloStitch handles them in parallel, right inside your browser.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <div class="card-icon" aria-hidden="true">✨</div>
+            <h3>One-click Export</h3>
+            <p>Export to MP4, WebM, or GIF at any resolution — no plugins, no server uploads required.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <div class="card-icon" aria-hidden="true">🎨</div>
+            <h3>Color Grading</h3>
+            <p>Apply cinematic LUTs or build your own grade with a non-destructive, live preview pipeline.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <div class="card-icon" aria-hidden="true">📐</div>
+            <h3>Motion Stabilisation</h3>
+            <p>Reduce unwanted camera shake with our optical-flow stabiliser, frame to frame.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <div class="card-icon" aria-hidden="true">🌙</div>
+            <h3>Adaptive Theme</h3>
+            <p>A carefully crafted dark and light mode powered by CSS custom properties — comfortable at any hour.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         Theme Demo
+    ══════════════════════════════════════════════════════════════ -->
+    <section class="section" id="demo" aria-labelledby="demo-heading">
+      <div class="container">
+        <h2 class="section-title" id="demo-heading">Try the theme toggle</h2>
+        <p class="section-subtitle">
+          Your preference is saved to <code>localStorage</code> and the OS
+          <code>prefers-color-scheme</code> setting is respected on first visit.
+        </p>
+
+        <div class="demo-panel">
+          <p class="demo-label">Current theme</p>
+
+          <p class="demo-theme-name" id="demo-theme-name" aria-live="polite">Light</p>
+
+          <!-- Theme toggle — large demo variant -->
+          <button
+            class="demo-toggle-large"
+            data-theme-toggle
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+            type="button"
+          >
+            <svg class="toggle-icon icon-sun" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41
+                       M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+            </svg>
+            <svg class="toggle-icon icon-moon" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+            <span class="sr-only">Toggle theme</span>
+          </button>
+
+          <!-- Live color swatches that change with the theme -->
+          <div class="color-swatches" aria-hidden="true">
+            <div class="swatch" style="background: var(--color-bg)"            title="Background"></div>
+            <div class="swatch" style="background: var(--color-bg-secondary)"  title="Background secondary"></div>
+            <div class="swatch" style="background: var(--color-surface)"       title="Surface"></div>
+            <div class="swatch" style="background: var(--color-accent)"        title="Accent"></div>
+            <div class="swatch" style="background: var(--color-text)"          title="Text"></div>
+            <div class="swatch" style="background: var(--color-text-muted)"    title="Muted text"></div>
+          </div>
+
+          <p style="font-size:.85rem; color: var(--color-text-muted); text-align:center; max-width:36ch;">
+            The color swatches above reflect the live CSS custom property values
+            as the theme switches.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         About
+    ══════════════════════════════════════════════════════════════ -->
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <h2 class="section-title" id="about-heading">About CieloStitch</h2>
+        <p class="section-subtitle">
+          Built by sky-watchers, for sky-watchers.
+        </p>
+        <div class="grid-3">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🌍</div>
+            <h3>Browser-first</h3>
+            <p>No installs, no accounts, no data leaving your device. Everything runs locally with modern Web APIs.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🔓</div>
+            <h3>Open Source</h3>
+            <p>CieloStitch is proudly open-source. Inspect, fork, and contribute on GitHub.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🚀</div>
+            <h3>Privacy First</h3>
+            <p>Your images are processed entirely in-memory. They are never uploaded or stored anywhere.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       Footer
+  ══════════════════════════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© 2026 CieloStitch · Weave the heavens and the earth, frame by frame</p>
+    </div>
+  </footer>
+
+  <script src="theme.js"></script>
+</body>
+</html>

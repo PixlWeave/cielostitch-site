@@ -1,0 +1,23 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="48" fill="#030711"/>
+  <g opacity="0.8">
+    <circle cx="216" cy="142" r="2.5" fill="#E6F2FF"/>
+    <circle cx="1062" cy="182" r="2.5" fill="#DDEEFF"/>
+    <circle cx="933" cy="122" r="3" fill="#B9D4FF"/>
+    <circle cx="137" cy="785" r="2.5" fill="#C9E0FF"/>
+    <circle cx="1031" cy="724" r="2.5" fill="#F4FAFF"/>
+  </g>
+  <circle cx="600" cy="450" r="270" fill="url(#sun)"/>
+  <circle cx="600" cy="450" r="295" stroke="#FFE29A" stroke-opacity="0.4" stroke-width="8"/>
+  <path d="M381 385C455 341 566 329 692 362C779 385 845 425 890 473" stroke="#FFF0C0" stroke-opacity="0.5" stroke-width="11" stroke-linecap="round"/>
+  <path d="M352 470C442 433 546 422 681 452C765 471 833 510 873 554" stroke="#FFD883" stroke-opacity="0.44" stroke-width="10" stroke-linecap="round"/>
+  <path d="M376 561C465 533 571 524 688 548C753 561 814 591 853 623" stroke="#FFCA63" stroke-opacity="0.36" stroke-width="9" stroke-linecap="round"/>
+  <defs>
+    <radialGradient id="sun" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(600 450) rotate(90) scale(270)">
+      <stop stop-color="#FFF1B9"/>
+      <stop offset="0.38" stop-color="#FFC45A"/>
+      <stop offset="0.72" stop-color="#FF8C31"/>
+      <stop offset="1" stop-color="#E85A1B"/>
+    </radialGradient>
+  </defs>
+</svg>

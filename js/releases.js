@@ -172,8 +172,12 @@
 
     const lines  = escaped.split("\n");
     const output = [];
-    let inList   = false;
+    let listType = null; // null | "ul" | "ol"
     let inCode   = false;
+
+    const closeList = function () {
+      if (listType) { output.push(`</${listType}>`); listType = null; }
+    };
 
     for (let i = 0; i < lines.length; i++) {
       let line = lines[i];
@@ -181,7 +185,7 @@
       // Fenced code block
       if (line.trimStart().startsWith("```")) {
         if (!inCode) {
-          if (inList) { output.push("</ul>"); inList = false; }
+          closeList();
           output.push("<pre><code>");
           inCode = true;
         } else {
@@ -192,10 +196,9 @@
       }
       if (inCode) { output.push(line); continue; }
 
-      // Close list if needed
-      if (!line.match(/^(\s*[-*+]|\s*\d+\.)\s/) && inList) {
-        output.push("</ul>");
-        inList = false;
+      // Close list if the current line is not a list item
+      if (!line.match(/^(\s*[-*+]|\s*\d+\.)\s/) && listType) {
+        closeList();
       }
 
       // Headings
@@ -209,7 +212,7 @@
       // Unordered list item
       const ulm = line.match(/^\s*[-*+]\s+(.*)/);
       if (ulm) {
-        if (!inList) { output.push("<ul>"); inList = true; }
+        if (listType !== "ul") { closeList(); output.push("<ul>"); listType = "ul"; }
         output.push(`<li>${inline(ulm[1])}</li>`);
         continue;
       }
@@ -217,7 +220,7 @@
       // Ordered list item
       const olm = line.match(/^\s*\d+\.\s+(.*)/);
       if (olm) {
-        if (!inList) { output.push("<ul>"); inList = true; }
+        if (listType !== "ol") { closeList(); output.push("<ol>"); listType = "ol"; }
         output.push(`<li>${inline(olm[1])}</li>`);
         continue;
       }
@@ -238,7 +241,7 @@
       output.push(`<p>${inline(line)}</p>`);
     }
 
-    if (inList)  output.push("</ul>");
+    closeList();
     if (inCode)  output.push("</code></pre>");
 
     return output.join("\n");

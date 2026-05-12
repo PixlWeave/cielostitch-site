@@ -245,4 +245,103 @@
       </footer>
     </div>
   </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Download CieloStitch — panorama stitching software for every platform." />
+  <title>CieloStitch — Downloads</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Favicon (SVG inline data URI) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230d1117'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-size='20' font-family='serif' fill='%2358a6ff'%3E✦%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       Site Header
+  ══════════════════════════════════════════════════ -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <!-- Logo mark -->
+      <svg class="site-header__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="6" fill="#0d1117"/>
+        <path d="M6 16 Q16 4 26 16 Q16 28 6 16Z" fill="none" stroke="#58a6ff" stroke-width="1.8"/>
+        <circle cx="16" cy="16" r="3" fill="#58a6ff"/>
+        <path d="M10 16 Q16 10 22 16" fill="none" stroke="#58a6ff" stroke-width="1" stroke-dasharray="2 2"/>
+      </svg>
+
+      <span class="site-header__title">CieloStitch</span>
+
+      <nav aria-label="Site navigation">
+        <ul class="site-header__nav">
+          <li><a href="#downloads">Downloads</a></li>
+          <li>
+            <a href="https://github.com/PixlWeave/cielostitch"
+               rel="noopener noreferrer" target="_blank">GitHub</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════
+       Hero
+  ══════════════════════════════════════════════════ -->
+  <section class="hero" aria-labelledby="hero-title">
+    <p class="hero__eyebrow">Open Source · Free to Use</p>
+    <h1 class="hero__title" id="hero-title">CieloStitch Downloads</h1>
+    <p class="hero__tagline">Weave the heavens and the earth, frame by frame.</p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       Releases / Downloads
+  ══════════════════════════════════════════════════ -->
+  <main id="downloads">
+    <section class="releases" aria-labelledby="releases-heading">
+
+      <div class="releases__header">
+        <h2 class="releases__heading" id="releases-heading">Releases</h2>
+        <p class="releases__subtitle">All versions are available on every supported platform.</p>
+        <a class="releases__gh-link"
+           href="https://github.com/PixlWeave/cielostitch/releases"
+           rel="noopener noreferrer" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="currentColor" aria-hidden="true">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577
+                     0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7
+                     3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236
+                     1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93
+                     0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23
+                     .96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23
+                     .645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92
+                     .42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57
+                     C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+          View on GitHub
+        </a>
+      </div>
+
+      <!-- Release cards are injected here by releases.js -->
+      <div id="releases-list" role="list" aria-label="Available releases" aria-live="polite"></div>
+
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════════════════════════
+       Footer
+  ══════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <p>
+      &copy; <span id="year"></span> PixlWeave &mdash; CieloStitch is released under the
+      <a href="https://github.com/PixlWeave/cielostitch/blob/main/LICENSE"
+         rel="noopener noreferrer" target="_blank">MIT Licence</a>.
+      Built with ♥ and open source.
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="js/releases.js"></script>
+</body>
 </html>

@@ -152,6 +152,10 @@
   animation-direction: reverse;
 }
 
+.showcase-preview {
+  margin: 0;
+}
+
 .showcase-preview img {
   border-radius: calc(var(--radius-lg) - 4px);
 }

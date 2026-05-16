@@ -1,6 +1,6 @@
 :root {
   color-scheme: dark;
-  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-sans: "Satoshi", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --bg: #07111f;
   --bg-elevated: rgba(12, 24, 43, 0.78);
   --bg-panel: rgba(15, 29, 52, 0.84);

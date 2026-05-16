@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CieloStitch Troubleshooting</title>
+    <meta
+      name="description"
+      content="Troubleshoot common CieloStitch problems such as poor alignment, visible seams, missing panels, and memory-heavy mosaic jobs."
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="../styles/layout.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
+    <link rel="stylesheet" href="../styles/help.css" />
+    <script defer src="../scripts/main.js"></script>
+  </head>
+  <body class="docs-page">
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="../index.html" aria-label="CieloStitch home">
+          <img src="../assets/cielostitch_256.png" alt="" width="48" height="48" />
+          <span class="brand-copy">
+            <strong>CieloStitch</strong>
+            <span>Astronomical &amp; Terrestrial mosaic stitching</span>
+          </span>
+        </a>
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+            <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+            <span>Theme</span>
+          </button>
+          <a class="button button--ghost" href="index.html">Help hub</a>
+        </div>
+      </header>
+
+      <main class="docs-main">
+        <section class="section">
+          <div class="docs-hero card">
+            <p class="eyebrow">Guide</p>
+            <h1>Troubleshooting Common CieloStitch Problems</h1>
+            <p>
+              If your stitch fails, looks wrong, or takes more memory than expected, start with the checks below.
+            </p>
+            <div class="docs-meta">
+              <span>Start with the simplest checks</span>
+              <span>Focus on input quality first</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section docs-grid">
+          <aside class="docs-sidebar">
+            <div class="card docs-aside">
+              <p class="eyebrow">Related pages</p>
+              <nav class="docs-nav" aria-label="Troubleshooting navigation">
+                <a href="getting-started.html">Getting Started</a>
+                <a href="installation.html">Installation &amp; Requirements</a>
+                <a href="workflow.html">How It Works</a>
+                <span class="is-current">Troubleshooting</span>
+                <a href="glossary.html">Glossary</a>
+              </nav>
+            </div>
+          </aside>
+
+          <div class="docs-content">
+            <article class="card docs-article">
+              <section>
+                <h2>Before troubleshooting</h2>
+                <ul>
+                  <li>Make sure you are stitching one coherent panel set from the same target and session.</li>
+                  <li>Check that neighboring images have enough overlap.</li>
+                  <li>Try a smaller subset before assuming the full workflow is broken.</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2>Stitch failed or alignment looks poor</h2>
+                <p>
+                  The most common causes are weak overlap, inconsistent input quality, or panels that do not actually
+                  belong together. Check the data first before changing many settings at once.
+                </p>
+              </section>
+
+              <section>
+                <h2>Visible seams or blending artifacts</h2>
+                <p>
+                  Visible seams usually mean neighboring panels differ too much in exposure, tone, sharpness, or
+                  alignment quality. Better source consistency is usually more valuable than aggressive correction.
+                </p>
+              </section>
+
+              <section>
+                <h2>Some panels were ignored or mismatched</h2>
+                <p>
+                  This often points to weak shared detail, outlier frames, or captures that differ too much from the
+                  rest of the set. Remove the questionable frames and retry with the strongest subset first.
+                </p>
+              </section>
+
+              <section>
+                <h2>Output looks incomplete or distorted</h2>
+                <p>
+                  Incomplete mosaics can come from missing coverage, weak overlap, or a panel sequence that never
+                  formed a reliable chain of matches. Distortion can also reflect limits in the source capture rather
+                  than a simple software setting problem.
+                </p>
+              </section>
+
+              <section>
+                <h2>Performance or memory issues</h2>
+                <p>
+                  Larger mosaics naturally need more memory, storage bandwidth, and CPU time. If a job feels too
+                  heavy, reduce the test case first, confirm your system is appropriate for the project size, and then
+                  scale back up.
+                </p>
+              </section>
+
+              <section>
+                <h2>When to adjust capture workflow instead of app settings</h2>
+                <p>
+                  Some problems start before the software ever sees the files. If the inputs are inconsistent, have too
+                  little overlap, or lack usable detail, no combination of settings will fully compensate. In that
+                  case, the real fix is a better capture plan.
+                </p>
+              </section>
+
+              <nav class="docs-pager" aria-label="Page navigation">
+                <a href="workflow.html">← How It Works</a>
+                <a href="glossary.html">Glossary →</a>
+              </nav>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <a href="../index.html">Home</a>
+        <a href="index.html">Help hub</a>
+        <a href="getting-started.html">Getting Started</a>
+        <span>© 2026 CieloStitch</span>
+      </footer>
+    </div>
+  </body>
+</html>

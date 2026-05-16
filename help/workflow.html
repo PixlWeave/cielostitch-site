@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How CieloStitch Works</title>
+    <meta
+      name="description"
+      content="Understand how CieloStitch uses overlapping panels, alignment, metadata, and blending to build a final mosaic."
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="../styles/layout.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
+    <link rel="stylesheet" href="../styles/help.css" />
+    <script defer src="../scripts/main.js"></script>
+  </head>
+  <body class="docs-page">
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="../index.html" aria-label="CieloStitch home">
+          <img src="../assets/cielostitch_256.png" alt="" width="48" height="48" />
+          <span class="brand-copy">
+            <strong>CieloStitch</strong>
+            <span>Astronomical &amp; Terrestrial mosaic stitching</span>
+          </span>
+        </a>
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+            <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+            <span>Theme</span>
+          </button>
+          <a class="button button--ghost" href="index.html">Help hub</a>
+        </div>
+      </header>
+
+      <main class="docs-main">
+        <section class="section">
+          <div class="docs-hero card">
+            <p class="eyebrow">Guide</p>
+            <h1>How CieloStitch Works</h1>
+            <p>
+              If you understand what the software is looking for in your data, it becomes much easier to predict
+              whether a panel set will stitch cleanly.
+            </p>
+            <div class="docs-meta">
+              <span>Workflow overview</span>
+              <span>Best read after Getting Started</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section docs-grid">
+          <aside class="docs-sidebar">
+            <div class="card docs-aside">
+              <p class="eyebrow">Related pages</p>
+              <nav class="docs-nav" aria-label="Workflow navigation">
+                <a href="getting-started.html">Getting Started</a>
+                <a href="installation.html">Installation &amp; Requirements</a>
+                <span class="is-current">How It Works</span>
+                <a href="troubleshooting.html">Troubleshooting</a>
+                <a href="glossary.html">Glossary</a>
+              </nav>
+            </div>
+          </aside>
+
+          <div class="docs-content">
+            <article class="card docs-article">
+              <section>
+                <h2>What a mosaic workflow is</h2>
+                <p>
+                  A mosaic workflow combines several overlapping images into one larger result. Each panel shows only
+                  part of the scene, so the software has to determine how neighboring panels fit together.
+                </p>
+              </section>
+
+              <section>
+                <h2>How overlapping panels are used</h2>
+                <p>
+                  Overlap is what makes stitching possible. When neighboring panels share enough recognizable detail,
+                  CieloStitch can estimate how they align in one combined layout. If overlap is weak or inconsistent,
+                  matching becomes harder and the result can become unstable.
+                </p>
+              </section>
+
+              <section>
+                <h2>Main stages of stitching</h2>
+                <ol>
+                  <li><strong>Input review:</strong> Load the panel set and remove any frames that clearly do not belong.</li>
+                  <li><strong>Matching:</strong> Find shared features between overlapping images.</li>
+                  <li><strong>Alignment:</strong> Place the panels into one common mosaic layout.</li>
+                  <li><strong>Blending:</strong> Merge transitions so panel boundaries are less distracting.</li>
+                  <li><strong>Output:</strong> Export the final stitched image.</li>
+                </ol>
+              </section>
+
+              <section>
+                <h2>Why consistency matter</h2>
+                <p>
+                  The consistently captured image data matters. Panels that differ too much in scale, exposure,
+                  orientation, or sharpness are harder to reconcile into one clean result.
+                </p>
+              </section>
+
+              <section>
+                <h2>What affects output quality</h2>
+                <ul>
+                  <li><strong>Strong overlap between panels</strong></li>
+                  <li><strong>Consistent capture quality across the session</strong></li>
+                  <li><strong>Enough subject detail to match reliably</strong></li>
+                  <li><strong>Realistic expectations for the source data</strong></li>
+                </ul>
+              </section>
+
+              <section>
+                <h2>Typical workflow mistakes</h2>
+                <ul>
+                  <li>Using panels with too little overlap.</li>
+                  <li>Mixing captures that differ too much in scale or orientation.</li>
+                  <li>Expecting weak source frames to become a strong final mosaic automatically.</li>
+                  <li>Changing many advanced settings before checking whether a simple baseline stitch works.</li>
+                </ul>
+              </section>
+
+              <nav class="docs-pager" aria-label="Page navigation">
+                <a href="installation.html">← Installation &amp; Requirements</a>
+                <a href="troubleshooting.html">Troubleshooting →</a>
+              </nav>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <a href="../index.html">Home</a>
+        <a href="index.html">Help hub</a>
+        <a href="glossary.html">Glossary</a>
+        <span>© 2026 CieloStitch</span>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CieloStitch Glossary</title>
+    <meta
+      name="description"
+      content="Definitions for common CieloStitch and mosaic stitching terms including overlap, registration, seam, metadata, and bit depth."
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="../styles/layout.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
+    <link rel="stylesheet" href="../styles/help.css" />
+    <script defer src="../scripts/main.js"></script>
+  </head>
+  <body class="docs-page">
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="../index.html" aria-label="CieloStitch home">
+          <img src="../assets/cielostitch_256.png" alt="" width="48" height="48" />
+          <span class="brand-copy">
+            <strong>CieloStitch</strong>
+            <span>Astronomical &amp; Terrestrial mosaic stitching</span>
+          </span>
+        </a>
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+            <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+            <span>Theme</span>
+          </button>
+          <a class="button button--ghost" href="index.html">Help hub</a>
+        </div>
+      </header>
+
+      <main class="docs-main">
+        <section class="section">
+          <div class="docs-hero card">
+            <p class="eyebrow">Reference</p>
+            <h1>Glossary</h1>
+            <p>
+              If a stitching or imaging term is unfamiliar, use this page for a quick plain-language explanation.
+            </p>
+            <div class="docs-meta">
+              <span>Quick definitions</span>
+              <span>Useful while reading the guides</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section docs-grid">
+          <aside class="docs-sidebar">
+            <div class="card docs-aside">
+              <p class="eyebrow">Related pages</p>
+              <nav class="docs-nav" aria-label="Glossary navigation">
+                <a href="getting-started.html">Getting Started</a>
+                <a href="installation.html">Installation &amp; Requirements</a>
+                <a href="workflow.html">How It Works</a>
+                <a href="troubleshooting.html">Troubleshooting</a>
+                <span class="is-current">Glossary</span>
+              </nav>
+            </div>
+          </aside>
+
+          <div class="docs-content">
+            <article class="card docs-article">
+              <section>
+                <h2>Common terms</h2>
+                <dl class="term-list">
+                  <div>
+                    <dt>Mosaic</dt>
+                    <dd>A larger final image made by combining several overlapping panels.</dd>
+                  </div>
+                  <div>
+                    <dt>Panel</dt>
+                    <dd>One source image that covers only part of the final stitched scene.</dd>
+                  </div>
+                  <div>
+                    <dt>Overlap</dt>
+                    <dd>The region shared by neighboring panels. Strong overlap is essential for reliable matching.</dd>
+                  </div>
+                  <div>
+                    <dt>Alignment</dt>
+                    <dd>The process of placing panels in the correct shared position for the final mosaic.</dd>
+                  </div>
+                  <div>
+                    <dt>Registration</dt>
+                    <dd>A related term for bringing images into the same geometric relationship.</dd>
+                  </div>
+                  <div>
+                    <dt>Blending</dt>
+                    <dd>The step that merges panel boundaries so transitions appear smoother and less obvious.</dd>
+                  </div>
+                  <div>
+                    <dt>Seam</dt>
+                    <dd>A visible boundary between panels that can appear when alignment or tonal consistency is weak.</dd>
+                  </div>
+                  <div>
+                    <dt>Metadata</dt>
+                    <dd>Information stored with an image file that can help describe or organize the inputs.</dd>
+                  </div>
+                  <div>
+                    <dt>Bit depth</dt>
+                    <dd>The amount of tonal precision stored per pixel. Higher bit depth can preserve more subtle gradation.</dd>
+                  </div>
+                  <div>
+                    <dt>Monochrome</dt>
+                    <dd>An image represented without full color channels, often important in solar or lunar workflows.</dd>
+                  </div>
+                  <div>
+                    <dt>Resolution</dt>
+                    <dd>The level of spatial detail in the source or final output image.</dd>
+                  </div>
+                  <div>
+                    <dt>Output canvas</dt>
+                    <dd>The final image area into which all aligned panels are placed and rendered.</dd>
+                  </div>
+                </dl>
+              </section>
+
+              <nav class="docs-pager" aria-label="Page navigation">
+                <a href="troubleshooting.html">← Troubleshooting</a>
+                <a href="index.html">Help hub →</a>
+              </nav>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <a href="../index.html">Home</a>
+        <a href="index.html">Help hub</a>
+        <a href="workflow.html">How It Works</a>
+        <span>© 2026 CieloStitch</span>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CieloStitch FAQ | Common Mosaic Stitching Questions</title>
+    <meta
+      name="description"
+      content="Find answers to common CieloStitch questions about supported workflows, overlap, system requirements, Windows support, and troubleshooting stitched mosaics."
+    />
+    <link rel="canonical" href="https://cielostitch.com/help/faq.html" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="../styles/layout.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
+    <link rel="stylesheet" href="../styles/help.css" />
+    <script defer src="../scripts/main.js"></script>
+  </head>
+  <body class="docs-page">
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="../index.html" aria-label="CieloStitch home">
+          <img src="../assets/cielostitch_256.png" alt="" width="48" height="48" />
+          <span class="brand-copy">
+            <strong>CieloStitch</strong>
+            <span>Astronomical &amp; Terrestrial mosaic stitching</span>
+          </span>
+        </a>
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+            <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+            <span>Theme</span>
+          </button>
+          <a class="button button--ghost" href="index.html">Help hub</a>
+        </div>
+      </header>
+
+      <main class="docs-main">
+        <section class="section">
+          <div class="docs-hero card">
+            <p class="eyebrow">FAQ</p>
+            <h1>CieloStitch frequently asked questions</h1>
+            <p>
+              This page answers the practical questions users tend to ask first about supported workflows, overlap,
+              hardware needs, output quality, and when a capture problem is bigger than a software setting.
+            </p>
+            <div class="docs-meta">
+              <span>Quick answers</span>
+              <span>Good first stop for common questions</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section docs-grid">
+          <aside class="docs-sidebar">
+            <div class="card docs-aside">
+              <p class="eyebrow">Related pages</p>
+              <nav class="docs-nav" aria-label="FAQ navigation">
+                <a href="getting-started.html">Getting Started</a>
+                <a href="installation.html">Installation &amp; Requirements</a>
+                <a href="workflow.html">How It Works</a>
+                <a href="troubleshooting.html">Troubleshooting</a>
+                <a href="glossary.html">Glossary</a>
+                <span class="is-current">FAQ</span>
+              </nav>
+            </div>
+          </aside>
+
+          <div class="docs-content">
+            <article class="card docs-article">
+              <section>
+                <h2>Does CieloStitch work only for astrophotography?</h2>
+                <p>
+                  No. CieloStitch is especially suited to solar and lunar mosaics, but the same panel-based workflow
+                  can also support terrestrial, nightscape, and other overlapping image sets when the captures are
+                  consistent enough to match cleanly.
+                </p>
+              </section>
+
+              <section>
+                <h2>How much overlap do I need between panels?</h2>
+                <p>
+                  There is no single number that guarantees success, but each neighboring panel needs enough shared
+                  detail for the software to recognize how they fit together. In practice, stronger overlap makes
+                  alignment much more reliable than trying to rescue sparse or marginal coverage.
+                </p>
+              </section>
+
+              <section>
+                <h2>Why do visible seams appear in a stitched mosaic?</h2>
+                <p>
+                  Seams usually mean the source panels differ too much in exposure, tone, sharpness, or alignment.
+                  Better consistency at capture time often improves the final result more than aggressive adjustment
+                  after the fact.
+                </p>
+              </section>
+
+              <section>
+                <h2>Can the app fix poor source data automatically?</h2>
+                <p>
+                  Not completely. CieloStitch can align and blend good overlapping panels, but it cannot fully
+                  compensate for weak detail, mismatched captures, missing coverage, or major inconsistencies in the
+                  source images.
+                </p>
+              </section>
+
+              <section>
+                <h2>Is CieloStitch available on Windows only?</h2>
+                <p>
+                  The current public desktop release is Windows-focused. If you are checking platform availability,
+                  use the download page and release notes on the site as the current source of truth.
+                </p>
+              </section>
+
+              <section>
+                <h2>Why does a large stitch use so much memory?</h2>
+                <p>
+                  Large mosaics naturally use more RAM, storage bandwidth, and processing time because more panels and
+                  more pixels have to be matched, aligned, blended, and written out. If performance feels heavy, test
+                  a smaller representative project first.
+                </p>
+              </section>
+
+              <section>
+                <h2>Where should I start if I am new?</h2>
+                <p>
+                  Start with Getting Started if you want the first-run workflow, Installation &amp; Requirements if you
+                  need hardware or platform guidance, and Troubleshooting if a result already looks wrong.
+                </p>
+                <div class="docs-links">
+                  <a class="button button--primary" href="getting-started.html">Getting Started</a>
+                  <a class="button button--secondary" href="troubleshooting.html">Troubleshooting</a>
+                </div>
+              </section>
+
+              <nav class="docs-pager" aria-label="Page navigation">
+                <a href="glossary.html">← Glossary</a>
+                <a href="index.html">Help hub →</a>
+              </nav>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <a href="../index.html">Home</a>
+        <a href="index.html">Help hub</a>
+        <a href="getting-started.html">Getting Started</a>
+        <span>© 2026 CieloStitch</span>
+      </footer>
+    </div>
+  </body>
+</html>

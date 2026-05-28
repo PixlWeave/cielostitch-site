@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CieloStitch Release Highlights | v0.4.90 to v0.4.95</title>
+    <meta
+      name="description"
+      content="Review the main user-facing changes added in CieloStitch v0.4.90 through v0.4.95, including APAP, the Simple engine, new panel actions, and updated stitching controls."
+    />
+    <link rel="canonical" href="https://cielostitch.com/help/release-highlights.html" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="../styles/layout.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
+    <link rel="stylesheet" href="../styles/help.css" />
+    <script defer src="../scripts/main.js"></script>
+  </head>
+  <body class="docs-page">
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="../index.html" aria-label="CieloStitch home">
+          <img src="../assets/cielostitch_256.png" alt="" width="48" height="48" />
+          <span class="brand-copy">
+            <strong>CieloStitch</strong>
+            <span>Astronomical &amp; Terrestrial mosaic stitching</span>
+          </span>
+        </a>
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+            <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+            <span>Theme</span>
+          </button>
+          <a class="button button--ghost" href="index.html">Help hub</a>
+        </div>
+      </header>
+
+      <main class="docs-main">
+        <section class="section">
+          <div class="docs-hero card">
+            <p class="eyebrow">Release Highlights</p>
+            <h1>What changed from v0.4.90 to v0.4.95</h1>
+            <p>
+              This page summarizes the main user-facing changes added after the earlier v0.4.50 help update,
+              so you can quickly see what is new in the desktop workflow and where to look in the app.
+            </p>
+            <div class="docs-meta">
+              <span>Focused on practical changes</span>
+              <span>Desktop workflow summary</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section docs-grid">
+          <aside class="docs-sidebar">
+            <div class="card docs-aside">
+              <p class="eyebrow">Related pages</p>
+              <nav class="docs-nav" aria-label="Release highlights navigation">
+                <a href="getting-started.html">Getting Started</a>
+                <a href="workflow.html">How It Works</a>
+                <a href="troubleshooting.html">Troubleshooting</a>
+                <span class="is-current">Release Highlights</span>
+                <a href="faq.html">FAQ</a>
+              </nav>
+            </div>
+          </aside>
+
+          <div class="docs-content">
+            <article class="card docs-article">
+              <section>
+                <h2>New alignment and geometry options</h2>
+                <ul>
+                  <li><strong>APAP parallax handling</strong> adds a locally varying warp option for scenes where one global transform is not flexible enough.</li>
+                  <li><strong>Homography</strong> is now part of the modular transform branch alongside Translation and Affine.</li>
+                  <li><strong>Cylindrical projection</strong> is available as an optional projection path for wider horizontal sweeps, with safe defaults so older behavior stays unchanged until you enable it.</li>
+                  <li><strong>Transform guidance changed</strong>: the old rotation-lock concept is gone because Translation and Affine now cover those intent choices more directly.</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2>New engine workflow</h2>
+                <ul>
+                  <li><strong>Simple engine</strong> is now available as a separate engine choice based on <code>cv2.Stitcher_create</code>.</li>
+                  <li><strong>Engine selection</strong> is exposed in the Basic and Advanced panes, and the CLI now supports an <code>engine</code> parameter as well.</li>
+                  <li><strong>Auto engine reset behavior</strong> was corrected so re-selecting Auto restores the same canonical baseline used at startup.</li>
+                  <li><strong>Simple engine timeout</strong> can now be configured, including a default timeout preference for new sessions.</li>
+                  <li><strong>Status bar behavior</strong> changes while the Simple engine runs: it shows elapsed time instead of placed-panel counts.</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2>Blending and seam behavior</h2>
+                <ul>
+                  <li><strong>Seam-aware ghost guard</strong> now uses a content-aware seam path for high-risk overlaps instead of relying only on the older narrowed-feather fallback.</li>
+                  <li><strong>Ghost guard rollout gating</strong> now resolves to internal modes: content-aware for riskier panorama-style cases and feather for more stable subjects such as solar and lunar work.</li>
+                  <li><strong>Seam diagnostics</strong> continue to record localized seam traces so difficult overlap regions are easier to inspect.</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2>Workflow and UI improvements</h2>
+                <ul>
+                  <li><strong>Input panel actions</strong>: you can now exclude an image from the current run from the context menu.</li>
+                  <li><strong>Output panel actions</strong>: the context menu can now copy the current preview to the clipboard, taking the current zoom and tone-mapped preview into account.</li>
+                  <li><strong>External viewer shortcuts</strong>: double-clicking input or output images opens them in the system viewer.</li>
+                  <li><strong>Panel-only layout toggle</strong>: double-clicking the Input or Output header row switches between the normal layout and a panel-only view.</li>
+                  <li><strong>Natural sort fix</strong>: filenames that begin with mixed numeric and character patterns sort more predictably.</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2>Settings and advanced-control changes</h2>
+                <ul>
+                  <li><strong>Settings files</strong> were reviewed and updated to JSON version 1.1.</li>
+                  <li><strong>Developer mode</strong> now acts as a hidden context flag that shows or hides expert-only controls.</li>
+                  <li><strong>Eleven internal tuning controls</strong> are now hidden from normal users even in Advanced mode unless developer mode is enabled.</li>
+                  <li><strong>Session resolver</strong> now derives additional parameters used later in automatic tuning.</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2>Architecture and internal cleanup</h2>
+                <ul>
+                  <li><strong>RunController and worker orchestration</strong> moved from the core package into the app package so the CLI does not depend on GUI-side orchestration code.</li>
+                  <li><strong>Matcher hardening</strong> and several bug fixes improved robustness across the newer alignment paths.</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2>Where to go next</h2>
+                <p>
+                  If you want to understand the newer geometry options, read How It Works next. If you want to know which changes matter most for a current problem, go to Troubleshooting.
+                </p>
+                <div class="docs-links">
+                  <a class="button button--primary" href="workflow.html">How It Works</a>
+                  <a class="button button--secondary" href="troubleshooting.html">Troubleshooting</a>
+                </div>
+              </section>
+
+              <nav class="docs-pager" aria-label="Page navigation">
+                <a href="index.html">← Help hub</a>
+                <a href="faq.html">FAQ →</a>
+              </nav>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <a href="../index.html">Home</a>
+        <a href="index.html">Help hub</a>
+        <a href="workflow.html">How It Works</a>
+        <span>© 2026 CieloStitch</span>
+      </footer>
+    </div>
+  </body>
+</html>

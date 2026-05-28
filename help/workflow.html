@@ -63,6 +63,7 @@
                 <a href="installation.html">Installation &amp; Requirements</a>
                 <span class="is-current">How It Works</span>
                 <a href="troubleshooting.html">Troubleshooting</a>
+                <a href="release-highlights.html">Release Highlights</a>
                 <a href="glossary.html">Glossary</a>
               </nav>
             </div>
@@ -90,12 +91,23 @@
               <section>
                 <h2>Main stages of stitching</h2>
                 <ol>
-                  <li><strong>Input review:</strong> Load the panel set and remove any frames that clearly do not belong.</li>
+                  <li><strong>Input review:</strong> Load the panel set and remove or exclude any frames that clearly do not belong.</li>
+                  <li><strong>Engine selection:</strong> Choose whether the Simple engine or the full Cielo engine is the right starting point for the job.</li>
                   <li><strong>Matching:</strong> Find shared features between overlapping images.</li>
-                  <li><strong>Alignment:</strong> Place the panels into one common mosaic layout.</li>
-                  <li><strong>Blending:</strong> Merge transitions so panel boundaries are less distracting.</li>
+                  <li><strong>Alignment:</strong> Place the panels into one common mosaic layout using Translation, Affine, Homography, or APAP depending on the capture.</li>
+                  <li><strong>Blending:</strong> Merge transitions so panel boundaries are less distracting, with ghost-aware seam handling available for difficult overlaps.</li>
                   <li><strong>Output:</strong> Export the final stitched image.</li>
                 </ol>
+              </section>
+
+              <section>
+                <h2>What changed in newer builds</h2>
+                <ul>
+                  <li><strong>Simple engine:</strong> A lightweight OpenCV-based path is now available for quicker runs and previews.</li>
+                  <li><strong>Cylindrical projection:</strong> A projection path for wide horizontal sweeps can be enabled when planar geometry starts to drift.</li>
+                  <li><strong>APAP:</strong> A locally varying warp is available for harder perspective or parallax cases.</li>
+                  <li><strong>Ghost-aware seams:</strong> Riskier overlaps can route through a content-aware seam path instead of a generic fallback.</li>
+                </ul>
               </section>
 
               <section>
@@ -121,6 +133,7 @@
                 <ul>
                   <li>Using panels with too little overlap.</li>
                   <li>Mixing captures that differ too much in scale or orientation.</li>
+                  <li>Using cylindrical projection or APAP before checking whether a simpler baseline already works cleanly.</li>
                   <li>Expecting weak source frames to become a strong final mosaic automatically.</li>
                   <li>Changing many advanced settings before checking whether a simple baseline stitch works.</li>
                 </ul>

@@ -62,6 +62,7 @@
                 <a href="installation.html">Installation &amp; Requirements</a>
                 <a href="workflow.html">How It Works</a>
                 <span class="is-current">Troubleshooting</span>
+                <a href="release-highlights.html">Release Highlights</a>
                 <a href="glossary.html">Glossary</a>
               </nav>
             </div>
@@ -84,6 +85,11 @@
                   The most common causes are weak overlap, inconsistent input quality, or panels that do not actually
                   belong together. Check the data first before changing many settings at once.
                 </p>
+                <ul>
+                  <li>Start with <strong>Auto engine</strong> if you are not sure whether Simple or Cielo is more appropriate.</li>
+                  <li>For wide horizontal sweeps, consider <strong>cylindrical projection</strong> before forcing more aggressive alignment.</li>
+                  <li>If Translation or Affine are too rigid, try <strong>Homography</strong> or <strong>APAP</strong> on a representative subset first.</li>
+                </ul>
               </section>
 
               <section>
@@ -92,6 +98,10 @@
                   Visible seams usually mean neighboring panels differ too much in exposure, tone, sharpness, or
                   alignment quality. Better source consistency is usually more valuable than aggressive correction.
                 </p>
+                <ul>
+                  <li>If the problem is a localized double edge, the newer <strong>ghost-aware seam handling</strong> may help more than a wider global blend.</li>
+                  <li>Inspect the strongest overlap and seam-stress areas first instead of changing many controls at once.</li>
+                </ul>
               </section>
 
               <section>
@@ -99,6 +109,10 @@
                 <p>
                   This often points to weak shared detail, outlier frames, or captures that differ too much from the
                   rest of the set. Remove the questionable frames and retry with the strongest subset first.
+                </p>
+                <p>
+                  The desktop app now also lets you exclude an image from the current run without removing it from disk,
+                  which is often faster than rebuilding the whole test set.
                 </p>
               </section>
 

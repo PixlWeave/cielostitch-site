@@ -47,9 +47,13 @@
 
 .hero__actions {
   grid-auto-flow: column;
-  justify-content: flex-start;
+  /*justify-content: flex-start;*/
   gap: 14px;
   margin: 28px 0 34px;
+}
+
+.hero__block{
+  text-align: center;
 }
 
 .hero__stats {

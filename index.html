@@ -40,7 +40,7 @@
             <span class="theme-toggle__icon" aria-hidden="true">◐</span>
             <span>Theme</span>
           </button>
-          <a class="button button--ghost" href="https://github.com/PixlWeave/CieloStitch">
+          <a class="button button--ghost" href="https://github.com/PixlWeave/CieloStitch" target="_blank">
             GitHub
           </a>
         </div>
@@ -65,7 +65,7 @@
               >
                 Download for Windows
               </a>
-              <a class="button button--secondary" href="https://github.com/PixlWeave/CieloStitch">
+              <a class="button button--secondary" href="https://github.com/PixlWeave/CieloStitch" target="_blank">
                 View on GitHub
               </a>
               <a class="button button--ghost" href="help/workflow.html">
@@ -181,7 +181,7 @@
                 The reusable stitching core powers feature detection, matching,
                 warping, blending, and export workflows for scientific mosaics.
               </p>
-              <a href="https://github.com/PixlWeave/CieloStitch">Explore the core repository</a>
+              <a href="https://github.com/PixlWeave/CieloStitch" target="_blank">Explore the core repository</a>
             </article>
             <article class="card architecture-card">
               <p class="architecture-card__eyebrow">CieloStitch App</p>
@@ -190,7 +190,7 @@
                 The application layers a PySide desktop experience on top of the core
                 engine for interactive configuration, previews, and release packaging.
               </p>
-              <a href="https://github.com/PixlWeave/CieloStitch/releases/tag/v0.5.00">See the current desktop release</a>
+              <a href="https://github.com/PixlWeave/CieloStitch/releases/tag/v0.5.00" target="_blank">See the current desktop release</a>
             </article>
           </div>
         </section>
@@ -203,7 +203,6 @@
           </div>
           <article class="card download-card">
             <div>
-              <p class="download-card__platform">Windows x64</p>
               <h3>CieloStitch Setup</h3>
               <p>
                 Release <strong>v0.5.00</strong> is the latest desktop app
@@ -212,20 +211,15 @@
             </div>
             <div class="download-card__meta">
               <span>Installer</span>
-              <span>Core licensed under MIT</span>
+              <span>Changes</span>
             </div>
             <div class="download-card__actions">
               <a
                 class="button button--primary"
                 href="https://github.com/PixlWeave/CieloStitch/releases/download/v0.5.00/CieloStitch-Setup-v0.5.00-win64.exe"
+                onclick="trackDownload('exe')"
               >
-                Download .exe
-              </a>
-              <a
-                class="button button--ghost"
-                href="https://github.com/PixlWeave/CieloStitch/releases"
-              >
-                GitHub Releases
+                Download for Windows
               </a>
               <a class="button button--ghost" href="help/release-highlights.html">
                 What changed in v0.4.50-v0.5.00
@@ -234,23 +228,44 @@
           </article>
         </section>
 
-        <section class="releases section" id="downloads" aria-labelledby="releases-title">
-          <div class="section-heading releases-heading">
-            <div>
-              <p class="eyebrow">Archive</p>
-              <h2 id="releases-title">Release archive</h2>
-              <p>Read release notes and browse previous installers directly from GitHub releases.</p>
-            </div>
-            <a class="button button--ghost releases-heading__action" href="https://github.com/PixlWeave/cielostitch/releases">
-              All releases on GitHub
-            </a>
+        <section class="download section" id="downloads" aria-labelledby="releases-title">
+          <div class="section-heading">
+            <p class="eyebrow">Archive</p>
+            <h2 id="download-title">Release archive and Demo data</h2>
+            <p>Read release notes and download demo data directly from GitHub releases.</p>
           </div>
+          <article class="card download-card">
+            <div>
+              <h3>CieloStitch Setup</h3>
+              <p>
+                All release upto <strong>v0.5.00</strong> are available on Github.
+                You can also download a set of demo data to get yourself familiar with the process of stitching using CieloStitch.
+              </p>
+            </div>
+            <div class="download-card__meta">
+              <span>Releases</span>
+              <span>Demo data</span>
+            </div>
+            <div class="download-card__actions">
+              <a
+                class="button button--ghost"
+                href="https://github.com/PixlWeave/CieloStitch/releases"
+                target="_blank"
+              >
+                GitHub Releases
+              </a>
+              <a class="button button--primary releases-heading__action"
+                 href="https://github.com/PixlWeave/cielostitch-demo-data" target="_blank">
+                Download demo data
+              </a>
+            </div>
+          </article>
           <div id="releases-list" role="list" aria-label="Available releases" aria-live="polite"></div>
         </section>
       </main>
 
       <footer class="site-footer">
-        <a href="https://github.com/PixlWeave/CieloStitch">GitHub</a>
+        <a href="https://github.com/PixlWeave/CieloStitch" target="_blank">GitHub</a>
         <a href="help/index.html">Help</a>
         <span><a href="mailto:hello@cielostitch.com" target="_blank" >Contact</a></span>
         <span>© 2026 CieloStitch</span>

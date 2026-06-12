@@ -169,7 +169,17 @@
       "brand";
   }
 
-  .header-actions,
+  /* Header nav: on small screens, allow wrapping and center align */
+  .header-actions {
+    display: flex;            /* override grid */
+    flex-wrap: wrap;          /* allow 2 lines if needed */
+    gap: 8px 10px;            /* compact spacing on mobile */
+    justify-content: center;  /* center the buttons */
+    justify-self: stretch;    /* take full width under header */
+    align-items: center;
+  }
+
+  /* Keep hero actions stacked vertically on small screens */
   .hero__actions {
     grid-auto-flow: row;
   }
@@ -179,8 +189,19 @@
     grid-template-columns: 1fr;
   }
 
+  /* Footer nav: wrap and center like the top menu on small screens */
   .site-footer {
-    justify-content: flex-start;
+    display: flex;            /* override grid */
+    flex-wrap: wrap;          /* allow wrapping to 2 lines if needed */
+    gap: 8px 10px;            /* compact spacing on mobile */
+    justify-content: center;  /* center the items */
+    align-items: center;
     padding-bottom: 32px;
+  }
+
+  .site-footer > * {
+    flex: 0 0 auto;           /* prevent items from stretching */
+    white-space: nowrap;      /* keep labels on a single line */
+    text-align: center;
   }
 }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articles | CieloStitch</title>
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="../styles/layout.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
+    <script defer src="../scripts/main.js"></script>
+    <script defer src="../scripts/article.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="../index.html" aria-label="CieloStitch home">
+          <img src="../assets/cielostitch_256.png" alt="" width="48" height="48" />
+          <span class="brand-copy"><strong>CieloStitch</strong><span>Articles</span></span>
+        </a>
+        <div class="header-actions">
+          <a class="button button--ghost" href="../index.html">Home</a>
+          <a class="button button--ghost" href="../help/index.html">Help</a>
+          <a class="button button--ghost" href="./index.html">Articles</a>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle dark mode"
+            aria-pressed="false"
+          >
+            <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+            <span>Theme</span>
+          </button>
+          <a class="button button--ghost" href="https://github.com/PixlWeave/CieloStitch" target="_blank">GitHub</a>
+        </div>
+      </header>
+
+      <main class="section">
+        <h1>CieloStitch Articles</h1>
+        <div id="article-list" class="cards"></div>
+      </main>
+
+      <footer class="site-footer section">
+        <p>© <span id="year"></span> CieloStitch</p>
+      </footer>
+    </div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>

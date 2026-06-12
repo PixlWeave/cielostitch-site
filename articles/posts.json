@@ -1,0 +1,10 @@
+[
+  {
+    "slug": "solar-mosaic-software",
+    "title": "Solar Mosaic Software | CieloStitch",
+    "date": "2026-06-11",
+    "summary": "Create high-resolution solar mosaics with CieloStitch. Open-source software for stitching H-alpha, white-light and full-disk solar images.",
+    "tags": ["solar", "tips"],
+    "hero": "../assets/cielostitch_256.png"
+  }
+]

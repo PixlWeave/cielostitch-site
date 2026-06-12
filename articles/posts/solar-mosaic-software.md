@@ -4,7 +4,7 @@ Create stunning high-resolution solar mosaics with **CieloStitch**, the software
 
 Whether you image the Sun in **white light**, **H-alpha**, or **Ca-K**, CieloStitch helps you combine multiple frames into a single detailed mosaic while preserving the fine structures that make solar imaging so rewarding.
 
-![Solar mosaic created with CieloStitch](..\images\solar-h-alpha-output.jpg)
+![Solar mosaic created with CieloStitch](/articles/images/solar-h-alpha-output.jpg)
 
 *Example solar mosaic created using CieloStitch.*
 

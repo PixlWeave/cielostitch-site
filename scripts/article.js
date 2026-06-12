@@ -6,7 +6,7 @@
 
     list.innerHTML = posts.map(p => `
       <article class="card">
-        <a href="./article.html?slug=${encodeURIComponent(p.slug)}" class="card__body">
+        <a href="./${encodeURIComponent(p.slug)}/" class="card__body">
           ${p.hero ? `<img class="card__media" src="${p.hero}" alt="" loading="lazy">` : ''}
           <div class="card__content">
             <h2 class="card__title">${p.title}</h2>

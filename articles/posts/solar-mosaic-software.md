@@ -145,7 +145,7 @@ Ready to create your own solar mosaics?
 
 Download **CieloStitch** and start building high-resolution images of the Sun using a software designed specifically for astronomical imaging.
 
-[Download CieloStitch](/home/)
+[Download CieloStitch](/index.html)
 
 ---
 
@@ -154,7 +154,7 @@ Download **CieloStitch** and start building high-resolution images of the Sun us
 * [Moon Mosaic Software](/moon-mosaic-software/)
 * [Milky Way Panorama Software](/milky-way-panorama-software/)
 * [FITS Image Stitching Guide](/fits-image-stitching/)
-* [Getting Started with CieloStitch](/help/getting-started/)
+* [Getting Started with CieloStitch](/help/getting-started.html)
 
 ---
 
